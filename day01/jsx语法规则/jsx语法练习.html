@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+    </head>
+    <body>
+        <div id="test"></div>
+        <script src="../js/react.development.js"></script>
+        <script src="../js/react-dom.development.js"></script>
+        <script src="../js/babel.min.js"></script>
+        <script type="text/babel">
+            const data = ['angular','react','vue']
+            const VDOM = (
+                <div>
+                    <h1>前段框架列表</h1>
+                    <ul>
+                        {data.map((name,index)=><li key={index}>{name}</li>)}
+
+                    </ul>
+                </div>
+            )
+            // 渲染
+            ReactDOM.render(VDOM,document.getElementById('test'))
+        </script>
+    </body>
+</html>
