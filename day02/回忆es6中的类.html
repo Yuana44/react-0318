@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>回忆类</title>
+</head>
+<body>
+<script type="text/javascript"> 
+// 父类
+    class Person{
+        constructor(name,age){
+            this.name = name
+            // console.log('name')
+            this.age = age
+        }
+        speak(){
+            console.log(`我的名字是${this.name}+${this.age}`)
+        }
+    }
+        // const p = new Person('tom',19)
+        // p.speak()
+
+    //子类
+    class Student extends Person{
+        constructor(...args){
+            super(...args)
+            this.grade = args[args.length-2]
+            this.school = args[args.length-1]
+        }
+        study(){
+            console.log('我在很努力的学习')
+        }
+    }
+    const s = new Student('tom',19,'高一','atguigu')
+    console.log(s)
+    
+</script>
+</body>
+</html>
